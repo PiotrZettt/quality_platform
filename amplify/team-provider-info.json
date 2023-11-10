@@ -10,6 +10,11 @@
       "StackName": "amplify-qplatform-dev-71733",
       "StackId": "arn:aws:cloudformation:eu-west-2:704856426126:stack/amplify-qplatform-dev-71733/38094700-7f99-11ee-8cfd-025e482337a6",
       "AmplifyAppId": "d1hmr97ovpwnsy"
+    },
+    "categories": {
+      "auth": {
+        "qplatform": {}
+      }
     }
   }
 }
