@@ -13,7 +13,12 @@
     },
     "categories": {
       "auth": {
-        "qplatform": {}
+        "qplatform": {
+          "userPoolId": "eu-west-2_6Qpm5jjTz",
+          "userPoolName": "quality_users",
+          "webClientId": "3295mptpujuc6dns1vfrgg26go",
+          "nativeClientId": "3295mptpujuc6dns1vfrgg26go"
+        }
       }
     }
   }
