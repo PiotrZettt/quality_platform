@@ -1,0 +1,45 @@
+{
+  "auth": {
+    "qplatform": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_qplatform_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "qplatform"
+        }
+      ]
+    },
+    "AMPLIFY_auth_qplatform_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "qplatform"
+        }
+      ]
+    },
+    "AMPLIFY_auth_qplatform_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "qplatform"
+        }
+      ]
+    },
+    "AMPLIFY_auth_qplatform_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "qplatform"
+        }
+      ]
+    }
+  }
+}

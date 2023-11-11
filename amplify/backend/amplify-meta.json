@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-qplatform-dev-71733-authRole",
+      "UnauthRoleArn": "arn:aws:iam::704856426126:role/amplify-qplatform-dev-71733-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::704856426126:role/amplify-qplatform-dev-71733-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-qplatform-dev-71733-deployment",
+      "UnauthRoleName": "amplify-qplatform-dev-71733-unauthRole",
+      "StackName": "amplify-qplatform-dev-71733",
+      "StackId": "arn:aws:cloudformation:eu-west-2:704856426126:stack/amplify-qplatform-dev-71733/38094700-7f99-11ee-8cfd-025e482337a6",
+      "AmplifyAppId": "d1hmr97ovpwnsy"
+    }
+  },
+  "auth": {
+    "qplatform": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "eu-west-2_6Qpm5jjTz",
+        "UserPoolName": "quality_users",
+        "AppClientID": "3295mptpujuc6dns1vfrgg26go",
+        "AppClientIDWeb": "3295mptpujuc6dns1vfrgg26go",
+        "HostedUIDomain": "quality"
+      },
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "lastPushTimeStamp": "2023-11-10T07:24:41.118Z"
+    }
+  }
+}
+
