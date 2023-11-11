@@ -1,20 +1,23 @@
-import { Amplify } from 'aws-amplify';
-import type { WithAuthenticatorProps } from '@aws-amplify/ui-react';
-import { withAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
 
+import { Amplify, Auth } from 'aws-amplify';
 import awsconfig from '../../src/aws-exports';
+
 Amplify.configure(awsconfig);
+Auth.configure(awsconfig);
 
-export function App({ signOut, user }: WithAuthenticatorProps) {
-    return (
-    
-        <>
-        <h1>Hello {user?.username}</h1>
-        <button onClick={signOut}>Sign out</button>
-      </>
-    )
-  
-}
+async function currentAuthenticatedUser() {
+  try {
+    const user = await Auth.currentAuthenticatedUser({
+      bypassCache: false // Optional and is false by default. If set to true, this call 
+      // will send a request to Cognito to get the latest user data.
+    });
+    console.log(user);
+    return user
+  } catch(err) {
+    console.log(err);
+  }
+};
 
-export default withAuthenticator(App);
+export default currentAuthenticatedUser
+
+
