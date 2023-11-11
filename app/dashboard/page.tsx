@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react';
 import { Auth } from 'aws-amplify';
 import { Amplify } from 'aws-amplify';
 
@@ -8,10 +10,10 @@ import '@aws-amplify/ui-react/styles.css';
 import awsconfig from '../../src/aws-exports';
 Amplify.configure(awsconfig);
 
-export default async function Dashboard() {
+function Dashboard() {
 
   try {
-    const user = await Auth.currentAuthenticatedUser({
+    const user = Auth.currentAuthenticatedUser({
       bypassCache: false // Optional and is false by default. If set to true, this call 
       // will send a request to Cognito to get the latest user data.
     });
@@ -26,3 +28,7 @@ export default async function Dashboard() {
     
   );
 }
+
+export default withAuthenticator(Dashboard)
+
+
