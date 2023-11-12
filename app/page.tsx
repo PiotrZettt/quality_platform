@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { Button } from './ui/button'
+import Link from 'next/link'
 
 
 export default async function Home() {
@@ -6,6 +8,9 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h3>This is the landing Page, hi </h3>
+      <Link href="/dashboard">
+            <p className="hidden md:block">Dashboard</p>
+          </Link>
       <div className="relative isolate">
       <div
         aria-hidden="true"
