@@ -19,6 +19,18 @@
           "webClientId": "3295mptpujuc6dns1vfrgg26go",
           "nativeClientId": "3295mptpujuc6dns1vfrgg26go"
         }
+      },
+      "function": {
+        "qplatformd838d72b": {
+          "deploymentBucketName": "amplify-qplatform-dev-71733-deployment",
+          "s3Key": "amplify-builds/qplatformd838d72b-6c316275736769574459-build.zip"
+        }
+      },
+      "storage": {
+        "dynamoPlatform": {}
+      },
+      "api": {
+        "platformApi": {}
       }
     }
   }

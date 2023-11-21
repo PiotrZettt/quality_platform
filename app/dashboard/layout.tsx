@@ -1,21 +1,8 @@
 'use client'
 
-import SideNav from '@/app/ui/dashboard/sidenav';
-
-import { withAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-import { Amplify, Auth } from 'aws-amplify';
-import currentAuthenticatedUser from '../auth/authentication';
-
-import awsconfig from '../../src/aws-exports';
-
-Amplify.configure({...awsconfig, ssr: true});
-
+import SideNav from "../ui/dashboard/sidenav";
 
 function Layout({ children }: { children: React.ReactNode }) {
-
-  const user = async () => {await currentAuthenticatedUser()
-  console.log(user)}
 
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
@@ -27,4 +14,4 @@ function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default withAuthenticator(Layout);
+export default Layout;

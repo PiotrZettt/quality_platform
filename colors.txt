@@ -1,0 +1,5 @@
+#617A55 - Dark green
+#A4D0A4 - Lite green
+#F7E1AE - Beige
+#FFF8D6 - Yellow
+

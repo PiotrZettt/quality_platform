@@ -1,25 +1,21 @@
-import Image from 'next/image'
-import { Button } from './ui/button'
-import Link from 'next/link'
+
+import WelcomeNav from './ui/welcomeNavBar/welcomeNav'
 
 
 export default async function Home() {
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h3>This is the landing Page, hi </h3>
-      <Link href="/dashboard">
-            <p className="hidden md:block">Dashboard</p>
-          </Link>
-      <div className="relative isolate">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      >
-        <div className="relative left-[calc(50%-11rem)] aspect-[155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#627d65] to-[#3027a6] opacity-70 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]">
-        </div>
-      </div>
-    </div>
+    <div>
+      <WelcomeNav/>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      
+      
+      <h3>
+      <div className='text-zinc-700 text-4xl'>Welcome to <div className='text-[#617A55] inline' >IsInSpec</div></div>
+      <div className=' text-zinc-700 text-2xl text-center pt-4'> The digital quality platform </div>
+      </h3>
     </main>
+    </div>
+    
   )
 }

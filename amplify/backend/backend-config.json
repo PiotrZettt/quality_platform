@@ -1,4 +1,20 @@
 {
+  "api": {
+    "platformApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "qplatformd838d72b"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "qplatform": {
       "customAuth": false,
@@ -6,6 +22,27 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito",
       "serviceType": "imported"
+    }
+  },
+  "function": {
+    "qplatformd838d72b": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamoPlatform"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
@@ -40,6 +77,28 @@
           "resourceName": "qplatform"
         }
       ]
+    },
+    "AMPLIFY_function_qplatformd838d72b_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "qplatformd838d72b"
+        }
+      ]
+    },
+    "AMPLIFY_function_qplatformd838d72b_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "qplatformd838d72b"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamoPlatform": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }
